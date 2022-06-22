@@ -1,0 +1,8 @@
+name: PixellitePatcher
+author: Pixellite Studios
+version: 1.0.0
+description: Security patcher plugin
+main: studio.pixellite.patcher.PatcherPlugin
+api-version: 1.13
+website: https://pixellite.studio/
+depend: [helper]
