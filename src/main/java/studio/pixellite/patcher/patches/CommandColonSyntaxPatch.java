@@ -14,7 +14,8 @@ public class CommandColonSyntaxPatch implements TerminableModule {
             .handler(e -> {
               String[] command = e.getMessage().split(" ");
 
-              if(command[0].contains(":")) {
+              if(command[0].contains(":") ||
+                      !e.getPlayer().hasPermission("pixellite.bypasscolonsyntax")) {
                 e.setCancelled(true);
                 Players.msg(e.getPlayer(), "&cThat command syntax is disabled.");
               }
